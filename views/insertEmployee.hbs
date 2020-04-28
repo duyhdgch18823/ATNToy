@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert employee</title>
+    <link rel="stylesheet" href="/styles/manage.css">
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="bar">
+            <ul id="menubar">
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/employee/insert">Insert</a></li>
+                <li class="menu"><a href="/employee">Cancel</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <center>
+        <h2>Add a new Employee</h2><br><br>
+        <form action="insert" method="POST">
+            Name:   <input type="text" name="employeeName">
+            <br><br>
+            Phone:   <input type="text" name="phone">
+            <br><br>
+            Email:   <input type="text" name="mail">
+            <br><br>
+            <input type="submit" value="Confirm">
+        </form>
+    </center>
+
+</body>
+
+</html>

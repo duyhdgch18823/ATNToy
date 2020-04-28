@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert product</title>
+    <link rel="stylesheet" href="/styles/manage.css">
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="bar">
+            <ul id="menubar">
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/product/insert">Insert</a></li>
+                <li class="menu"><a href="/product">Cancel</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <center>
+        <h2>Add a new Product</h2><br><br>
+        <form action="insert" enctype="multipart/form-data" method="POST">
+            Name: <input type="text" name="productName">
+            <br><br>
+            Categr: <input type="text" name="cate">
+            <br><br>
+            Color: <input type="text" name="color" value="Colorful">
+            <br><br>
+            Price: <input type="text" name="price">
+            <br><br>
+            {{!-- Image: <input type="file" name="picture" accept="image/*" />
+            <br><br> --}}
+            <input type="submit" value="Confirm">
+        </form>
+    </center>
+
+</body>
+
+</html>

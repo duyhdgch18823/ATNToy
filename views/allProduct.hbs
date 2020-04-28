@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product management</title>
+    <link rel="stylesheet" href="/styles/manage.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="bar">
+            <ul id="menubar">
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/product/insert">Insert</a></li>
+                <li class="menu"><a href="/product">Clear</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <center>
+        <h1>Product Management</h1>
+
+        <form action="/product/search" method="POST">
+            <input type="text" name="prdName" id="" placeholder="Enter product name..">
+            <input type="submit" value="Search">
+        </form>
+
+        <br><br>
+
+        <table width="60%">
+            <tr>
+                {{!-- <td>Id</td> --}}
+                {{!-- <th>Image</th> --}}
+                <th>Name</th>
+                <th>Category</th>
+                <th>Color</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            {{# each product}}
+            <tr>
+                {{!-- <td>{{_id}}</td> --}}
+                {{!-- <td><img src='/product/photo/{{img}}' alt="" width="250px" height="200px"></td> --}}
+                <td>{{Name}}</td>
+                <td>{{Category}}</td>
+                <td>{{Color}}</td>
+                <td>{{Price}}</td>
+                <td>
+                    <a href="/product/edit?id={{_id}}">Update</a>
+                    <br>
+                    <a href="/product/delete?id={{_id}}">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit employee</title>
+    <link rel="stylesheet" href="/styles/manage.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="bar">
+            <ul id="menubar">
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/employee/insert">Insert</a></li>
+                <li class="menu"><a href="/employee">Cancel</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <center>
+        <h2>Update an Employee info</h2><br><br>
+        <form action="edit" method="POST">
+            <input type="hidden" name="id" value="{{employee._id}}">
+            Name : <input type="text" name="name" value="{{employee.Name}}">
+            <br><br>
+            Phone : <input type="text" name="phone" value="{{employee.Phone}}">
+            <br><br>
+            Email : <input type="text" name="email" value="{{employee.Email}}">
+            <br><br>
+            <input type="submit" value="Update">
+        </form>
+    </center>
+
+</body>
+
+</html>

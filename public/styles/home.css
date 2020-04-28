@@ -1,0 +1,16 @@
+#container {
+    margin-top: 100px;
+    width: 280px;
+    background-color: rgb(245, 243, 243);
+    border-radius: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(241, 4, 4 );
+    background-color: transparent;
+    text-decoration: underline;
+}

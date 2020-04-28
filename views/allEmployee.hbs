@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee management</title>
+    <link rel="stylesheet" href="/styles/manage.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="bar">
+            <ul id="menubar">
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/employee/insert">Insert</a></li>
+                <li class="menu"><a href="/employee">Clear</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <center>
+        <h1>Employee Management</h1>
+
+        <form action="/employee/search" method="POST">
+            <input type="text" name="empName" id="" placeholder="Enter employee name..">
+            <input type="submit" value="Search">
+        </form>
+
+        <br><br>
+
+        <table width="50%">
+            <tr>
+                {{!-- <td>Id</td> --}}
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+            {{# each employee}}
+            <tr>
+                {{!-- <td>{{_id}}</td> --}}
+                <td>{{Name}}</td>
+                <td>{{Phone}}</td>
+                <td>{{Email}}</td>
+                <td>
+                    <a href="/employee/edit?id={{_id}}">Update</a>
+                    <br>
+                    <a href="/employee/delete?id={{_id}}">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </center>
+
+</body>
+
+</html>

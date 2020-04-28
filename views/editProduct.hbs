@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit product</title>
+    <link rel="stylesheet" href="/styles/manage.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="bar">
+            <ul id="menubar">
+                <li class="menu"><a href="/">Home</a></li>
+                <li class="menu"><a href="/product/insert">Insert</a></li>
+                <li class="menu"><a href="/product">Cancel</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <center>
+        <h2>Update a Product info</h2><br><br>
+        <form action="edit" method="POST">
+            <input type="hidden" name="id" value="{{product._id}}">
+            Name : <input type="text" name="name" value="{{product.Name}}">
+            <br><br>
+            Cate : <input type="text" name="cate" value="{{product.Category}}">
+            <br><br>
+            Color : <input type="text" name="color" value="{{product.Color}}">
+            <br><br>
+            Price : <input type="text" name="price" value="{{product.Price}}">
+            <br><br>
+            <input type="submit" value="Update">
+        </form>
+    </center>
+
+</body>
+
+</html>
