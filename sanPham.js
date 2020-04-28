@@ -59,15 +59,6 @@ router.get('/edit', async (req, res) => {
 
 
 // update product's info
-// router.get('/edit', async (req, res) => {
-//     let id = req.query.id;
-//     var ObjectID = require('mongodb').ObjectID;
-
-//     let client = await MongoClient.connect(url);
-//     let dbo = client.db("ATNToy");
-//     let result = await dbo.collection("Product").findOne({ "_id": ObjectID(id) });
-//     res.render('editProduct', { product: result });
-// })
 
 router.post('/edit', async (req, res) => {
     let id = req.body.id;
