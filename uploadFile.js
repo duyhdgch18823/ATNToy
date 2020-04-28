@@ -70,7 +70,7 @@ router.post('/uploadphoto', upload.single('picture'), (req, res) => {
         contentType: req.file.mimetype,
         image: new Buffer(encode_image, 'base64')
     };
-    db.collection('mycollection').insertOne(finalImg, (err, result) => {
+    db.collection('Image').insertOne(finalImg, (err, result) => {
         console.log(result)
         if (err) return console.log(err)
         console.log('saved to database')
@@ -81,7 +81,7 @@ router.post('/uploadphoto', upload.single('picture'), (req, res) => {
 
 // Hien thi toan bo anh duoi dang id
 router.get('/photos', (req, res) => {
-    db.collection('mycollection').find().toArray((err, result) => {
+    db.collection('Image').find().toArray((err, result) => {
 
         const imgArray = result.map(element => element._id);
         console.log(imgArray);
@@ -96,7 +96,7 @@ router.get('/photos', (req, res) => {
 router.get('/photo/:id', (req, res) => {
     var filename = req.params.id;
 
-    db.collection('mycollection').findOne({ '_id': ObjectId(filename) }, (err, result) => {
+    db.collection('Image').findOne({ '_id': ObjectId(filename) }, (err, result) => {
         if (err) return console.log(err)
         res.contentType('image/jpeg');
         res.send(result.image.buffer)
@@ -106,8 +106,8 @@ router.get('/photo/:id', (req, res) => {
 
 router.get('/viewAllPhotos',async (req,res)=>{
     let client= await MongoClient.connect(myurl);
-    let dbo = client.db("Test");
-    let results = await dbo.collection("mycollection").find({}).toArray();
+    let dbo = client.db("ATNToy");
+    let results = await dbo.collection("Image").find({}).toArray();
     res.render('allPhoto',{photo:results});
 });
 

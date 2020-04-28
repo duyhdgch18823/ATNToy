@@ -150,29 +150,29 @@ router.post('/search', async (req, res) => {
 
 // image
 // Hien thi toan bo anh duoi dang id
-router.get('/photos', (req, res) => {
-    db.collection('mycollection').find().toArray((err, result) => {
+// router.get('/photos', (req, res) => {
+//     db.collection('ATNToy').find().toArray((err, result) => {
 
-        const imgArray = result.map(element => element._id);
-        console.log(imgArray);
-        if (err) return console.log(err)
-        res.send(imgArray)
+//         const imgArray = result.map(element => element._id);
+//         console.log(imgArray);
+//         if (err) return console.log(err)
+//         res.send(imgArray)
 
-    })
-});
+//     })
+// });
 
 
-// Ham hien thi anh dua tren id cua chung
-router.get('/photo/:id', (req, res) => {
-    var filename = req.params.id;
+// // Ham hien thi anh dua tren id cua chung
+// router.get('/photo/:id', (req, res) => {
+//     var filename = req.params.id;
 
-    db.collection('mycollection').findOne({ '_id': ObjectId(filename) }, (err, result) => {
-        if (err) return console.log(err)
-        res.contentType('image/jpeg');
-        res.send(result.image.buffer)
+//     db.collection('ATNToy').findOne({ '_id': ObjectId(filename) }, (err, result) => {
+//         if (err) return console.log(err)
+//         res.contentType('image/jpeg');
+//         res.send(result.image.buffer)
 
-    })
-})
+//     })
+// })
 
 
 module.exports = router;
