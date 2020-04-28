@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duyhdgch18823/Duyhdgch18823.git"
+    "url": "git+https://github.com/duyhdgch18823/ATNToy.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/duyhdgch18823/Duyhdgch18823/issues"
+    "url": "https://github.com/duyhdgch18823/ATNToy/issues"
   },
-  "homepage": "https://github.com/duyhdgch18823/Duyhdgch18823#readme"
+  "homepage": "https://github.com/duyhdgch18823/ATNToy#readme"
 }
