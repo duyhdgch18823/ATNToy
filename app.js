@@ -30,7 +30,7 @@ app.use('/product', productController);
 app.use('/employee', employeeController);
 
 // cai dat port de upload len server
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 var server = app.listen(port, function () { });
 
 // nếu chỉ dùng để thử trên localhost thì có thể thay 2 dòng trên bằng dòng dưới đây
