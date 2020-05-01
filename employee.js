@@ -5,8 +5,8 @@ var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 
 
-// var url = 'mongodb://localhost:27017';
-var url = 'mongodb+srv://DuyHD:duy106hn@cluster0-knunn.azure.mongodb.net/test?retryWrites=true&w=majority';
+var url = 'mongodb://localhost:27017';
+// var url = 'mongodb+srv://DuyHD:duy106hn@cluster0-knunn.azure.mongodb.net/test?retryWrites=true&w=majority';
 
 router.get('/', async (req, res) => {
     let client = await MongoClient.connect(url);
@@ -54,16 +54,6 @@ router.get('/edit', async (req, res) => {
 
 
 // update employee's info
-// router.get('/edit', async (req, res) => {
-//     let id = req.query.id;
-//     var ObjectID = require('mongodb').ObjectID;
-
-//     let client = await MongoClient.connect(url);
-//     let dbo = client.db("ATNToy");
-//     let result = await dbo.collection("Employee").findOne({ "_id": ObjectID(id) });
-//     res.render('editEmployee', { employee: result });
-// })
-
 router.post('/edit', async (req, res) => {
     let id = req.body.id;
 

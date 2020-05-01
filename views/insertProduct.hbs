@@ -26,7 +26,7 @@
 
     <center>
         <h2>Add a new Product</h2><br><br>
-        <form action="insert" method="POST">
+        <form action="insert" method="POST" enctype="multipart/form-data">
             Name: <input type="text" name="productName">
             <br><br>
             Categr: <input type="text" name="cate">
@@ -35,12 +35,13 @@
             <br><br>
             Price: <input type="text" name="price">
             <br><br>
-            {{!-- Image: <input type="file" name="picture" accept="image/*" />
-            <br><br> --}}
+            Image: <input type="file" name="picture" accept="image/*">
+            <br><br>
             <input type="submit" value="Confirm">
         </form>
     </center>
 
+    
 </body>
 
 </html>
