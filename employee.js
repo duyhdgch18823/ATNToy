@@ -5,8 +5,8 @@ var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 
 
-var url = 'mongodb://localhost:27017';
-// var url = 'mongodb+srv://DuyHD:duy106hn@cluster0-knunn.azure.mongodb.net/test?retryWrites=true&w=majority';
+// var url = 'mongodb://localhost:27017';
+var url = 'mongodb+srv://DuyHD:duy106hn@cluster0-knunn.azure.mongodb.net/test?retryWrites=true&w=majority';
 
 router.get('/', async (req, res) => {
     let client = await MongoClient.connect(url);

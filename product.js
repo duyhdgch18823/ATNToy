@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var MongoClient = require('mongodb').MongoClient;
 ObjectId = require('mongodb').ObjectId;
 
-var url = 'mongodb://localhost:27017';
-// var url = 'mongodb+srv://DuyHD:duy106hn@cluster0-knunn.azure.mongodb.net/test?retryWrites=true&w=majority';
+// var url = 'mongodb://localhost:27017';
+var url = 'mongodb+srv://DuyHD:duy106hn@cluster0-knunn.azure.mongodb.net/test?retryWrites=true&w=majority';
 
 
 // có 'async' thì phải có 'await' 
